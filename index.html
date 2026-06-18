@@ -228,50 +228,50 @@
       max-width:740px;
       font-size:15px;
     }
-    .price-options{
+    .channel-options{
       display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:18px;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
       padding:22px;
     }
-    .price-card{
+    .channel-options.two{
+      grid-template-columns:repeat(2,1fr);
+    }
+    .channel-card{
       border:1px solid var(--line);
       background:#fff;
-      padding:24px;
-      min-height:330px;
+      padding:22px;
+      min-height:300px;
       display:flex;
       flex-direction:column;
       justify-content:space-between;
     }
-    .price-card.full{
+    .channel-card.featured{
       border-color:var(--accent);
       box-shadow:0 0 0 2px rgba(159,47,53,.08);
     }
-    .level{
+    .ch-label{
       display:inline-block;
       width:max-content;
       font-weight:800;
-      color:#17212b;
-      border:1px solid #d7d0c7;
-      padding:4px 11px;
+      color:#fff;
+      background:var(--deep);
+      padding:5px 11px;
       border-radius:99px;
-      background:#faf8f5;
       margin-bottom:14px;
       font-size:13px;
     }
-    .price-card.full .level{
+    .channel-card.featured .ch-label{
       background:var(--accent);
-      border-color:var(--accent);
-      color:#fff;
     }
-    .price-card h4{
+    .channel-card h4{
       margin:0 0 8px;
-      font-size:22px;
+      font-size:21px;
       line-height:1.3;
       letter-spacing:-.02em;
     }
     .price{
-      font-size:32px;
+      font-size:30px;
       font-weight:900;
       color:var(--accent);
       line-height:1.1;
@@ -284,12 +284,12 @@
       font-weight:700;
       letter-spacing:0;
     }
-    .price-card dl{
+    .channel-card dl{
       margin:0;
       display:grid;
       gap:13px;
     }
-    .price-card dt{
+    .channel-card dt{
       font-size:12px;
       font-weight:800;
       color:#7a838c;
@@ -297,7 +297,7 @@
       text-transform:uppercase;
       margin:0 0 1px;
     }
-    .price-card dd{
+    .channel-card dd{
       margin:0;
       color:#36414c;
       font-size:14px;
@@ -387,13 +387,16 @@
       flex-wrap:wrap;
     }
 
+    @media(max-width:960px){
+      .channel-options,.channel-options.two{grid-template-columns:1fr}
+      .channel-card{min-height:auto}
+    }
     @media(max-width:900px){
       .navlinks{display:none}
-      .grid-3,.price-options,.wireless,.contact{grid-template-columns:1fr}
+      .grid-3,.wireless,.contact{grid-template-columns:1fr}
       .section{padding:54px 18px}
       .hero-inner{padding:74px 18px 64px}
       .contact .copy,.contact-box{padding:34px 24px}
-      .price-card{min-height:auto}
     }
   </style>
 </head>
@@ -459,7 +462,7 @@
     <section class="section" id="pricing">
       <div class="kicker">Price guide</div>
       <h2>料金目安</h2>
-      <p class="section-copy">金額は税抜目安です。区分を選ぶと、Light / Full の2段階が表示されます。実際の金額は内容により変動します。</p>
+      <p class="section-copy">金額は税抜目安です。区分を選ぶと、想定される入力チャンネル数ごとの料金目安が表示されます。実際の金額は内容により変動します。</p>
 
       <div class="pricing-tabs" aria-label="料金区分タブ">
         <button class="price-tab active" data-rank="rank-a">A 司会・BGM</button>
@@ -469,38 +472,35 @@
         <button class="price-tab" data-rank="rank-e">E 大型ステージ</button>
       </div>
 
+      <div class="note-box" style="margin-top:0;margin-bottom:24px">
+        <p>入力チャンネル数は目安です。同じch数でも、屋内外・客席範囲・演目内容・モニター数により区分が変わる場合があります。</p>
+      </div>
+
       <section class="rank-panel active" id="rank-a">
         <div class="panel-head">
           <span class="rank-label">A</span>
           <h3>司会・BGM向け</h3>
           <p>屋内小規模、式典、司会、BGM、ソロ歌唱中心の内容です。</p>
         </div>
-        <div class="price-options">
-          <article class="price-card">
-            <div>
-              <span class="level">Light</span>
-              <h4>司会・BGM中心</h4>
-              <div class="price">¥55,000〜<br><small>税抜</small></div>
-              <dl>
-                <div><dt>入力規模</dt><dd>〜4ch程度</dd></div>
-                <div><dt>想定内容</dt><dd>司会、BGM、式典、小規模イベント</dd></div>
-                <div><dt>判断目安</dt><dd>屋内小規模、短時間、モニター不要</dd></div>
-              </dl>
-            </div>
+        <div class="channel-options two">
+          <article class="channel-card">
+            <span class="ch-label">約4chまで</span>
+            <h4>司会・BGM中心</h4>
+            <div class="price">¥55,000〜<br><small>税抜</small></div>
+            <dl>
+              <div><dt>想定内容</dt><dd>司会、BGM、式典、小規模イベント</dd></div>
+              <div><dt>判断目安</dt><dd>屋内小規模、短時間、モニター不要</dd></div>
+            </dl>
           </article>
-          <article class="price-card full">
-            <div>
-              <span class="level">Full</span>
-              <h4>歌唱・モニターあり</h4>
-              <div class="price">¥75,000〜<br><small>税抜</small></div>
-              <dl>
-                <div><dt>入力規模</dt><dd>〜8ch程度</dd></div>
-                <div><dt>想定内容</dt><dd>司会、BGM、歌唱あり</dd></div>
-                <div><dt>判断目安</dt><dd>屋外近距離、拘束長め、モニター少数あり</dd></div>
-              </dl>
-            </div>
-          </article>
-        </div>
+          <article class="channel-card featured">
+            <span class="ch-label">約8chまで</span>
+            <h4>歌唱少数あり</h4>
+            <div class="price">¥75,000〜<br><small>税抜</small></div>
+            <dl>
+              <div><dt>想定内容</dt><dd>司会、BGM、歌唱あり</dd></div>
+              <div><dt>判断目安</dt><dd>屋外近距離、拘束長め、モニター少数あり</dd></div>
+            </dl>
+          </article>        </div>
       </section>
 
       <section class="rank-panel" id="rank-b">
@@ -509,28 +509,25 @@
           <h3>歌唱・カラオケ向け</h3>
           <p>歌謡、カラオケ、ソロ複数、小編成など、声と音楽を客席へ届ける内容です。</p>
         </div>
-        <div class="price-options">
-          <article class="price-card">
-            <span class="level">Light</span>
+        <div class="channel-options two">
+          <article class="channel-card">
+            <span class="ch-label">約8chまで</span>
             <h4>歌唱・カラオケ少数</h4>
             <div class="price">¥80,000〜<br><small>税抜</small></div>
             <dl>
-              <div><dt>入力規模</dt><dd>〜8ch程度</dd></div>
               <div><dt>想定内容</dt><dd>歌唱、カラオケ少数、司会あり</dd></div>
               <div><dt>判断目安</dt><dd>屋内50〜100名程度、進行シンプル</dd></div>
             </dl>
           </article>
-          <article class="price-card full">
-            <span class="level">Full</span>
+          <article class="channel-card featured">
+            <span class="ch-label">約16chまで</span>
             <h4>歌唱多め・小編成</h4>
             <div class="price">¥110,000〜<br><small>税抜</small></div>
             <dl>
-              <div><dt>入力規模</dt><dd>〜16ch程度</dd></div>
               <div><dt>想定内容</dt><dd>歌謡、カラオケ、ソロ複数、小編成</dd></div>
               <div><dt>判断目安</dt><dd>屋外小規模、音楽再生あり、拘束長め</dd></div>
             </dl>
-          </article>
-        </div>
+          </article>        </div>
       </section>
 
       <section class="rank-panel" id="rank-c">
@@ -539,24 +536,31 @@
           <h3>屋外イベント向け</h3>
           <p>屋外イベント、歌謡複数、音楽再生、小編成、軽いバンドなどの内容です。入力が少ない場合でも、屋外で客席範囲がある場合はこの区分になることがあります。</p>
         </div>
-        <div class="price-options">
-          <article class="price-card">
-            <span class="level">Light</span>
+        <div class="channel-options">
+          <article class="channel-card">
+            <span class="ch-label">約8chまで</span>
             <h4>屋外・入力少なめ</h4>
             <div class="price">¥110,000〜<br><small>税抜</small></div>
             <dl>
-              <div><dt>入力規模</dt><dd>〜8ch程度</dd></div>
               <div><dt>想定内容</dt><dd>屋外イベント、司会、歌唱、BGM</dd></div>
               <div><dt>判断目安</dt><dd>屋外100名程度、入力少なめ、モニター少数</dd></div>
             </dl>
           </article>
-          <article class="price-card full">
-            <span class="level">Full</span>
-            <h4>屋外・音楽内容多め</h4>
+          <article class="channel-card featured">
+            <span class="ch-label">約16chまで</span>
+            <h4>屋外・歌唱複数</h4>
+            <div class="price">¥130,000〜<br><small>税抜</small></div>
+            <dl>
+              <div><dt>想定内容</dt><dd>屋外イベント、歌謡複数、音楽再生あり</dd></div>
+              <div><dt>判断目安</dt><dd>屋外100〜200名程度、歌唱・音楽あり</dd></div>
+            </dl>
+          </article>
+          <article class="channel-card">
+            <span class="ch-label">約24chまで</span>
+            <h4>小編成・軽いバンド</h4>
             <div class="price">¥160,000〜<br><small>税抜</small></div>
             <dl>
-              <div><dt>入力規模</dt><dd>〜24ch程度</dd></div>
-              <div><dt>想定内容</dt><dd>歌謡複数、小編成、アコースティック、軽いバンド</dd></div>
+              <div><dt>想定内容</dt><dd>小編成、アコースティック、軽いバンド</dd></div>
               <div><dt>判断目安</dt><dd>客席広め、モニター複数、設営調整多め</dd></div>
             </dl>
           </article>
@@ -570,23 +574,30 @@
           <h3>バンド演奏向け</h3>
           <p>楽器演奏、ジャズ、ドラムありのバンド、モニター複数系統が必要な内容です。</p>
         </div>
-        <div class="price-options">
-          <article class="price-card">
-            <span class="level">Light</span>
-            <h4>小編成バンド・楽器あり</h4>
+        <div class="channel-options">
+          <article class="channel-card">
+            <span class="ch-label">約16chまで</span>
+            <h4>小編成バンド</h4>
             <div class="price">¥150,000〜<br><small>税抜</small></div>
             <dl>
-              <div><dt>入力規模</dt><dd>〜16ch程度</dd></div>
               <div><dt>想定内容</dt><dd>小編成バンド、ジャズ、楽器あり</dd></div>
               <div><dt>判断目安</dt><dd>ドラムなし、または小規模バンド</dd></div>
             </dl>
           </article>
-          <article class="price-card full">
-            <span class="level">Full</span>
-            <h4>ドラムあり・転換あり</h4>
+          <article class="channel-card featured">
+            <span class="ch-label">約24chまで</span>
+            <h4>通常バンドPA</h4>
+            <div class="price">¥180,000〜<br><small>税抜</small></div>
+            <dl>
+              <div><dt>想定内容</dt><dd>ドラムありバンド、ジャズ、複数楽器</dd></div>
+              <div><dt>判断目安</dt><dd>モニター複数、リハあり</dd></div>
+            </dl>
+          </article>
+          <article class="channel-card">
+            <span class="ch-label">約32chまで</span>
+            <h4>入力多め・転換あり</h4>
             <div class="price">¥220,000〜<br><small>税抜</small></div>
             <dl>
-              <div><dt>入力規模</dt><dd>〜32ch程度</dd></div>
               <div><dt>想定内容</dt><dd>バンド、ジャズ、入力多め、転換あり</dd></div>
               <div><dt>判断目安</dt><dd>モニター多め、リハ多め、拘束長め</dd></div>
             </dl>
@@ -600,23 +611,30 @@
           <h3>大型ステージ向け</h3>
           <p>屋外広範囲、複数出演者、複数バンド、転換ありの大きめイベント向けです。内容により個別見積となります。</p>
         </div>
-        <div class="price-options">
-          <article class="price-card">
-            <span class="level">Light</span>
-            <h4>屋外広範囲・単独ステージ</h4>
+        <div class="channel-options">
+          <article class="channel-card">
+            <span class="ch-label">約24chまで</span>
+            <h4>屋外広範囲</h4>
             <div class="price">¥220,000〜<br><small>税抜</small></div>
             <dl>
-              <div><dt>入力規模</dt><dd>〜24ch程度</dd></div>
               <div><dt>想定内容</dt><dd>屋外広範囲、ステージイベント</dd></div>
               <div><dt>判断目安</dt><dd>400名以上、単独ステージ、転換少なめ</dd></div>
             </dl>
           </article>
-          <article class="price-card full">
-            <span class="level">Full</span>
-            <h4>複数バンド・大規模屋外</h4>
+          <article class="channel-card featured">
+            <span class="ch-label">約32chまで</span>
+            <h4>複数出演・屋外</h4>
+            <div class="price">¥280,000〜<br><small>税抜</small></div>
+            <dl>
+              <div><dt>想定内容</dt><dd>複数出演、大きめ屋外、音楽イベント</dd></div>
+              <div><dt>判断目安</dt><dd>複数出演者、モニター多め、設営規模大</dd></div>
+            </dl>
+          </article>
+          <article class="channel-card">
+            <span class="ch-label">32ch以上</span>
+            <h4>複数バンド・転換あり</h4>
             <div class="price">¥330,000〜<br><small>税抜</small></div>
             <dl>
-              <div><dt>入力規模</dt><dd>32ch以上</dd></div>
               <div><dt>想定内容</dt><dd>複数バンド、大規模屋外、転換あり</dd></div>
               <div><dt>判断目安</dt><dd>転換多め、広範囲、拘束・設営負担大</dd></div>
             </dl>
