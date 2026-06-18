@@ -4,20 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>日下部電気音響 | イベント音響・PA業務</title>
-  <meta name="description" content="岐阜県周辺のイベント音響、PAオペレート、音響機材設営。会場規模・演目内容に応じて音響システムをご提案します。">
+  <meta name="description" content="岐阜県周辺のイベント音響、PAオペレート、音響機材設営。会場規模・演目内容に応じて音響システムをご案内します。">
   <style>
     :root{
-      --ink:#111820;
-      --ink2:#1a2430;
+      --ink:#141b22;
       --paper:#f7f4ef;
       --white:#ffffff;
-      --muted:#68727d;
-      --line:#ddd7cf;
-      --line2:#ebe6df;
+      --muted:#66717c;
+      --line:#ded7cf;
+      --line2:#eee8e0;
       --accent:#9f2f35;
       --accent-dark:#7f252b;
-      --soft:#f8f5f0;
-      --card:#ffffff;
+      --soft:#fbf8f3;
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
@@ -26,7 +24,7 @@
       font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",YuGothic,Meiryo,sans-serif;
       color:var(--ink);
       background:var(--paper);
-      line-height:1.72;
+      line-height:1.75;
     }
     a{color:inherit;text-decoration:none}
     .topbar{
@@ -36,6 +34,7 @@
       background:rgba(255,255,255,.96);
       color:var(--ink);
       border-bottom:1px solid var(--line);
+      backdrop-filter:blur(10px);
     }
     .nav{
       max-width:1120px;
@@ -47,22 +46,10 @@
       gap:18px;
     }
     .brand{
-      display:flex;
-      align-items:center;
-      gap:12px;
       font-weight:700;
       letter-spacing:.03em;
       white-space:nowrap;
       color:var(--ink);
-    }
-    .mark{
-      width:32px;
-      height:32px;
-      border:1px solid rgba(255,255,255,.8);
-      display:grid;
-      place-items:center;
-      font-size:14px;
-      color:var(--white);
     }
     .navlinks{
       display:flex;
@@ -71,24 +58,15 @@
       color:#5f6974;
     }
     .navlinks a:hover{color:var(--accent)}
-    .cta-small{
-      background:var(--accent);
-      padding:9px 15px;
-      border-radius:2px;
-      font-weight:700;
-      color:#fff;
-      font-size:14px;
-    }
 
     .hero{
       color:var(--ink);
-      background:
-        linear-gradient(135deg, #ffffff 0%, #f7f4ef 58%, #efe8dd 100%);
+      background:linear-gradient(135deg,#ffffff 0%,#f7f4ef 58%,#efe8dd 100%);
     }
     .hero-inner{
       max-width:1120px;
       margin:0 auto;
-      padding:92px 22px 78px;
+      padding:86px 22px 76px;
     }
     .eyebrow{
       color:var(--accent);
@@ -99,11 +77,11 @@
       margin-bottom:16px;
     }
     h1{
-      font-size:clamp(34px,6vw,68px);
-      line-height:1.12;
+      font-size:clamp(34px,6vw,64px);
+      line-height:1.13;
       letter-spacing:-.04em;
       margin:0 0 22px;
-      max-width:880px;
+      max-width:860px;
       font-weight:800;
     }
     .lead{
@@ -131,17 +109,7 @@
     .section{
       max-width:1120px;
       margin:auto;
-      padding:68px 22px;
-    }
-    .section.dark{
-      max-width:none;
-      background:var(--ink);
-      color:#fff;
-    }
-    .section.dark .section-inner{
-      max-width:1120px;
-      margin:auto;
-      padding:0 22px;
+      padding:66px 22px;
     }
     .kicker{
       font-size:13px;
@@ -152,8 +120,8 @@
       margin-bottom:10px;
     }
     h2{
-      font-size:clamp(28px,4vw,46px);
-      line-height:1.2;
+      font-size:clamp(28px,4vw,44px);
+      line-height:1.22;
       letter-spacing:-.035em;
       margin:0 0 16px;
     }
@@ -163,7 +131,6 @@
       color:#4f5b66;
       margin:0 0 32px;
     }
-    .dark .section-copy{color:#c9d0d7}
 
     .grid-3{
       display:grid;
@@ -171,10 +138,10 @@
       gap:18px;
     }
     .card{
-      background:var(--card);
+      background:#fff;
       border:1px solid var(--line);
       padding:25px;
-      min-height:220px;
+      min-height:210px;
       display:flex;
       flex-direction:column;
       justify-content:space-between;
@@ -196,78 +163,34 @@
     .note-box{
       background:#fff;
       border:1px solid var(--line);
-      padding:26px;
+      padding:25px;
       margin-top:24px;
     }
     .note-box p{margin:0;color:#53606c}
 
-    .steps{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:1px;
-      background:rgba(255,255,255,.14);
-      border:1px solid rgba(255,255,255,.14);
+    .pricing-tabs{
+      display:flex;
+      gap:8px;
+      overflow-x:auto;
+      padding-bottom:8px;
+      margin-bottom:18px;
     }
-    .step{
-      background:#151f29;
-      padding:24px;
-      min-height:170px;
-    }
-    .step .num{
-      display:block;
-      color:#e4a6ac;
-      font-weight:800;
-      font-size:14px;
-      letter-spacing:.08em;
-      margin-bottom:24px;
-    }
-    .step h3{margin:0 0 10px;font-size:20px;line-height:1.28}
-    .step p{color:#c9d0d7;margin:0;font-size:14px}
-
-    .pricing-layout{
-      display:grid;
-      grid-template-columns:270px 1fr;
-      gap:22px;
-      align-items:start;
-    }
-    .rank-nav{
-      position:sticky;
-      top:82px;
-      background:#fff;
+    .price-tab{
+      white-space:nowrap;
       border:1px solid var(--line);
-      box-shadow:0 14px 35px rgba(17,24,32,.05);
-      padding:10px;
-    }
-    .rank-tab{
-      width:100%;
-      border:0;
-      background:transparent;
-      text-align:left;
-      padding:14px 14px;
-      border-radius:3px;
-      cursor:pointer;
+      background:#fff;
       color:var(--ink);
-      display:block;
-      border-bottom:1px solid var(--line2);
+      padding:10px 13px;
+      border-radius:999px;
       font:inherit;
+      cursor:pointer;
+      font-size:14px;
     }
-    .rank-tab:last-child{border-bottom:0}
-    .rank-tab small{
-      display:block;
-      color:var(--muted);
-      font-size:12px;
-      margin-top:2px;
-    }
-    .rank-tab strong{
-      display:block;
-      font-size:15px;
-      letter-spacing:-.01em;
-    }
-    .rank-tab.active{
+    .price-tab.active{
       background:var(--accent);
       color:#fff;
+      border-color:var(--accent);
     }
-    .rank-tab.active small{color:#ffe5e8}
     .rank-panel{
       display:none;
       background:#fff;
@@ -276,7 +199,7 @@
     }
     .rank-panel.active{display:block}
     .panel-head{
-      padding:28px 28px 22px;
+      padding:28px;
       border-bottom:1px solid var(--line2);
       background:linear-gradient(180deg,#fff,#fbf8f3);
     }
@@ -301,104 +224,66 @@
     .panel-head p{
       margin:0;
       color:#56626d;
-      max-width:720px;
+      max-width:740px;
       font-size:15px;
     }
-    .level-cards{
+    .price-summary{
       display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:16px;
-      padding:20px;
+      grid-template-columns:.8fr 1.2fr 1fr;
+      gap:18px;
+      padding:22px;
     }
-    .level-card{
-      border:1px solid var(--line);
-      background:#fff;
-      padding:20px;
-      min-height:360px;
-      display:flex;
-      flex-direction:column;
+    .price-main{
+      background:var(--soft);
+      border:1px solid var(--line2);
+      padding:22px;
     }
-    .level-card.featured{
-      border-color:var(--accent);
-      box-shadow:0 0 0 2px rgba(185,31,43,.08);
-    }
-    .level-name{
-      display:inline-block;
-      width:max-content;
-      font-weight:800;
-      color:#17212b;
-      border:1px solid #d7d0c7;
-      padding:3px 10px;
-      border-radius:99px;
-      background:#faf8f5;
-      margin-bottom:12px;
-      font-size:13px;
-    }
-    .level-card.featured .level-name{
-      background:var(--accent);
-      border-color:var(--accent);
-      color:#fff;
-    }
-    .level-card h4{
-      margin:0 0 10px;
-      font-size:21px;
-      line-height:1.28;
-      letter-spacing:-.02em;
-    }
-    .level-card .price{
-      font-size:25px;
-      font-weight:900;
-      color:var(--accent);
-      margin:4px 0 14px;
-      white-space:nowrap;
-    }
-    .level-card dl{
-      margin:0;
-      display:grid;
-      gap:12px;
-    }
-    .level-card dt{
+    .price-main span{
+      display:block;
+      color:#6b7580;
       font-size:12px;
       font-weight:800;
-      color:#7a838c;
       letter-spacing:.08em;
       text-transform:uppercase;
-      margin:0 0 1px;
+      margin-bottom:8px;
     }
-    .level-card dd{
+    .price-main strong{
+      display:block;
+      font-size:32px;
+      color:var(--accent);
+      line-height:1.1;
+      letter-spacing:-.03em;
+    }
+    .price-main small{
+      display:block;
+      color:#6b7580;
+      margin-top:8px;
+      font-size:13px;
+    }
+    .summary-box{
+      border:1px solid var(--line2);
+      padding:22px;
+      background:#fff;
+    }
+    .summary-box h4{
+      margin:0 0 12px;
+      font-size:18px;
+      letter-spacing:-.02em;
+    }
+    .summary-box ul{
       margin:0;
-      color:#36414c;
+      padding-left:1.1em;
+      color:#46515c;
       font-size:14px;
     }
-    .panel-note{
-      margin:0 20px 20px;
+    .summary-box li{margin:.25em 0}
+    .mini-note{
+      margin:0 22px 22px;
       background:var(--soft);
       border:1px solid var(--line2);
       padding:18px;
       color:#596572;
       font-size:14px;
-    }
-    .jump-strip{
-      display:none;
-      overflow-x:auto;
-      gap:8px;
-      margin:0 0 16px;
-      padding-bottom:4px;
-    }
-    .jump-strip button{
-      white-space:nowrap;
-      border:1px solid var(--line);
-      background:#fff;
-      padding:10px 12px;
-      border-radius:99px;
-      font:inherit;
-      cursor:pointer;
-      font-size:14px;
-    }
-    .jump-strip button.active{
-      background:var(--accent);
-      color:#fff;
-      border-color:var(--accent);
     }
 
     .wireless{
@@ -438,16 +323,16 @@
       white-space:nowrap;
     }
 
-    .split-cta{
+    .contact{
       display:grid;
       grid-template-columns:1fr 1fr;
       background:#eee7de;
       color:var(--ink);
       margin-top:0;
     }
-    .split-cta .copy{padding:52px}
-    .split-cta h2{font-size:clamp(30px,4vw,46px)}
-    .split-cta p{color:#5f6974;font-size:16px;max-width:590px}
+    .contact .copy{padding:52px}
+    .contact h2{font-size:clamp(30px,4vw,46px)}
+    .contact p{color:#53606c;font-size:16px;max-width:590px}
     .contact-box{background:#fff;color:var(--ink);padding:42px}
     .contact-row{border-bottom:1px solid #eee;padding:14px 0}
     .contact-row span{
@@ -459,13 +344,8 @@
       text-transform:uppercase;
     }
     .contact-row strong{font-size:17px}
-    .contact-row a{
-      color:var(--accent);
-      text-decoration:none;
-    }
-    .contact-row a:hover{
-      text-decoration:underline;
-    }
+    .contact-row a{color:var(--accent);text-decoration:none}
+    .contact-row a:hover{text-decoration:underline}
 
     footer{
       background:#111820;
@@ -482,20 +362,12 @@
       flex-wrap:wrap;
     }
 
-    @media(max-width:980px){
-      .pricing-layout{grid-template-columns:1fr}
-      .rank-nav{display:none}
-      .jump-strip{display:flex}
-      .level-cards{grid-template-columns:1fr}
-      .level-card{min-height:auto}
-    }
-    @media(max-width:880px){
+    @media(max-width:900px){
       .navlinks{display:none}
-      .grid-3,.wireless,.steps,.split-cta{grid-template-columns:1fr}
-      .section{padding:56px 18px}
-      .section.dark .section-inner{padding:0 18px}
-      .split-cta .copy,.contact-box{padding:34px 24px}
-      .hero-inner{padding:78px 18px 68px}
+      .grid-3,.price-summary,.wireless,.contact{grid-template-columns:1fr}
+      .section{padding:54px 18px}
+      .hero-inner{padding:74px 18px 64px}
+      .contact .copy,.contact-box{padding:34px 24px}
     }
   </style>
 </head>
@@ -549,7 +421,7 @@
             <h3>本番オペレート</h3>
             <p>司会進行、歌唱、カラオケ、楽器演奏、バンド演奏など、演目に合わせて本番中の音響操作を行います。</p>
           </div>
-          <a class="more" href="#contact">相談する</a>
+          <a class="more" href="#contact">お問い合わせ</a>
         </article>
       </div>
 
@@ -557,246 +429,175 @@
         <p>料金は、会場の広さ、屋内外、客席範囲、入力チャンネル数、演目内容、拘束時間などをもとにご案内します。</p>
       </div>
     </section>
+
     <section class="section" id="pricing">
       <div class="kicker">Price guide</div>
-      <h2>音響システム料金目安</h2>
-      <p class="section-copy">金額は税抜目安です。区分を選ぶと、Basic / Standard / Plus の3段階が表示されます。有線マイク・DI・スタンド・ケーブル類は、各基本音響システム料金に含みます。前日仕込み・複数日対応などは日数加算があります。</p>
+      <h2>料金目安</h2>
+      <p class="section-copy">金額は税抜目安です。区分を選ぶと、内容と入口価格が表示されます。実際の金額は内容により変動します。</p>
 
-      <div class="jump-strip" aria-label="料金区分タブ（スマートフォン用）">
-        <button class="jump-tab active" data-rank="rank-a">A 司会・BGM</button>
-        <button class="jump-tab" data-rank="rank-b">B 歌唱・カラオケ</button>
-        <button class="jump-tab" data-rank="rank-c">C 屋外イベント</button>
-        <button class="jump-tab" data-rank="rank-d">D バンド演奏</button>
-        <button class="jump-tab" data-rank="rank-e">E 大型ステージ</button>
+      <div class="pricing-tabs" aria-label="料金区分タブ">
+        <button class="price-tab active" data-rank="rank-a">A 司会・BGM</button>
+        <button class="price-tab" data-rank="rank-b">B 歌唱・カラオケ</button>
+        <button class="price-tab" data-rank="rank-c">C 屋外イベント</button>
+        <button class="price-tab" data-rank="rank-d">D バンド演奏</button>
+        <button class="price-tab" data-rank="rank-e">E 大型ステージ</button>
       </div>
 
-      <div class="pricing-layout">
-        <aside class="rank-nav" aria-label="料金区分タブ">
-          <button class="rank-tab active" data-rank="rank-a">
-            <strong>A：司会・BGM向け</strong>
-            <small>〜8ch / ¥60,000〜</small>
-          </button>
-          <button class="rank-tab" data-rank="rank-b">
-            <strong>B：歌唱・カラオケ向け</strong>
-            <small>〜16ch / ¥85,000〜</small>
-          </button>
-          <button class="rank-tab" data-rank="rank-c">
-            <strong>C：屋外イベント向け</strong>
-            <small>〜24ch / ¥120,000〜</small>
-          </button>
-          <button class="rank-tab" data-rank="rank-d">
-            <strong>D：バンド演奏向け</strong>
-            <small>〜32ch / ¥160,000〜</small>
-          </button>
-          <button class="rank-tab" data-rank="rank-e">
-            <strong>E：大型ステージ向け</strong>
-            <small>24ch以上 / ¥230,000〜</small>
-          </button>
-        </aside>
-
-        <div class="rank-panels">
-          <section class="rank-panel active" id="rank-a">
-            <div class="panel-head">
-              <span class="rank-label">A</span>
-              <h3>司会・BGM向け</h3>
-              <p>屋内小規模、式典、司会、BGM、ソロ歌唱中心の内容です。入力数が少なく、モニターや設営内容が比較的シンプルな場合の区分です。</p>
-            </div>
-            <div class="level-cards">
-              <article class="level-card">
-                <span class="level-name">Basic</span>
-                <h4>司会・BGM・式典中心</h4>
-                <div class="price">¥60,000</div>
-                <dl>
-                  <div><dt>入力規模</dt><dd>〜4ch程度</dd></div>
-                  <div><dt>判断目安</dt><dd>屋内小規模、短時間、モニター不要</dd></div>
-                  <div><dt>想定内容</dt><dd>司会、BGM、簡単な式典</dd></div>
-                </dl>
-              </article>
-              <article class="level-card featured">
-                <span class="level-name">Standard</span>
-                <h4>司会・BGM・ソロ歌唱少し</h4>
-                <div class="price">¥70,000</div>
-                <dl>
-                  <div><dt>入力規模</dt><dd>〜8ch程度</dd></div>
-                  <div><dt>判断目安</dt><dd>屋内〜50名程度、簡単な歌唱あり</dd></div>
-                  <div><dt>想定内容</dt><dd>司会、BGM、歌唱1〜2名程度</dd></div>
-                </dl>
-              </article>
-              <article class="level-card">
-                <span class="level-name">Plus</span>
-                <h4>歌唱あり</h4>
-                <div class="price">¥80,000</div>
-                <dl>
-                  <div><dt>入力規模</dt><dd>〜8ch程度</dd></div>
-                  <div><dt>判断目安</dt><dd>屋外近距離、拘束長め、モニター少数あり</dd></div>
-                  <div><dt>想定内容</dt><dd>司会、BGM、歌唱</dd></div>
-                </dl>
-              </article>
-            </div>
-          </section>
-
-          <section class="rank-panel" id="rank-b">
-            <div class="panel-head">
-              <span class="rank-label">B</span>
-              <h3>歌唱・カラオケ向け</h3>
-              <p>歌謡、カラオケ、ソロ複数、小編成など、声と音楽を客席全体へ届ける内容です。屋内100名程度のイベントで使いやすい区分です。</p>
-            </div>
-            <div class="level-cards">
-              <article class="level-card">
-                <span class="level-name">Basic</span>
-                <h4>歌唱・カラオケ少数</h4>
-                <div class="price">¥85,000</div>
-                <dl>
-                  <div><dt>入力規模</dt><dd>〜8ch程度</dd></div>
-                  <div><dt>判断目安</dt><dd>屋内50〜100名程度、進行シンプル</dd></div>
-                  <div><dt>想定内容</dt><dd>歌唱、カラオケ少数、司会あり</dd></div>
-                </dl>
-              </article>
-              <article class="level-card featured">
-                <span class="level-name">Standard</span>
-                <h4>歌謡・カラオケ・ソロ複数</h4>
-                <div class="price">¥100,000</div>
-                <dl>
-                  <div><dt>入力規模</dt><dd>〜12ch程度</dd></div>
-                  <div><dt>判断目安</dt><dd>屋内100〜150名程度、モニターあり</dd></div>
-                  <div><dt>想定内容</dt><dd>歌謡、カラオケ、ソロ複数</dd></div>
-                </dl>
-              </article>
-              <article class="level-card">
-                <span class="level-name">Plus</span>
-                <h4>歌唱多め・小編成</h4>
-                <div class="price">¥120,000</div>
-                <dl>
-                  <div><dt>入力規模</dt><dd>〜16ch程度</dd></div>
-                  <div><dt>判断目安</dt><dd>屋外〜100名程度、音楽再生あり、拘束長め</dd></div>
-                  <div><dt>想定内容</dt><dd>歌唱多め、小編成、屋外小規模</dd></div>
-                </dl>
-              </article>
-            </div>
-          </section>
-
-          <section class="rank-panel" id="rank-c">
-            <div class="panel-head">
-              <span class="rank-label">C</span>
-              <h3>屋外イベント向け</h3>
-              <p>屋外イベント、歌謡複数、音楽再生、小編成、軽いバンドなどの内容です。入力が少ない場合でも、屋外で客席範囲がある場合はこの区分になることがあります。</p>
-            </div>
-            <div class="level-cards">
-              <article class="level-card">
-                <span class="level-name">Basic</span>
-                <h4>屋外・入力少なめ</h4>
-                <div class="price">¥120,000</div>
-                <dl>
-                  <div><dt>入力規模</dt><dd>〜8ch程度</dd></div>
-                  <div><dt>判断目安</dt><dd>屋外100名程度、入力少なめ、モニター少数</dd></div>
-                  <div><dt>想定内容</dt><dd>屋外イベント、司会、歌唱、BGM</dd></div>
-                </dl>
-              </article>
-              <article class="level-card featured">
-                <span class="level-name">Standard</span>
-                <h4>屋外・歌謡複数</h4>
-                <div class="price">¥140,000</div>
-                <dl>
-                  <div><dt>入力規模</dt><dd>〜16ch程度</dd></div>
-                  <div><dt>判断目安</dt><dd>屋外100〜200名程度、歌唱・音楽あり</dd></div>
-                  <div><dt>想定内容</dt><dd>屋外イベント、歌謡複数、音楽再生あり</dd></div>
-                </dl>
-              </article>
-              <article class="level-card">
-                <span class="level-name">Plus</span>
-                <h4>小編成・軽いバンド</h4>
-                <div class="price">¥170,000</div>
-                <dl>
-                  <div><dt>入力規模</dt><dd>〜24ch程度</dd></div>
-                  <div><dt>判断目安</dt><dd>客席広め、モニター複数、設営調整多め</dd></div>
-                  <div><dt>想定内容</dt><dd>小編成、アコースティック、軽いバンド</dd></div>
-                </dl>
-              </article>
-            </div>
-            <p class="panel-note">例：屋外イベントで入力が約8chの場合でも、客席範囲や音楽再生・歌唱に必要な音量を確保する場合は、C Basic としてお見積りします。</p>
-          </section>
-
-          <section class="rank-panel" id="rank-d">
-            <div class="panel-head">
-              <span class="rank-label">D</span>
-              <h3>バンド演奏向け</h3>
-              <p>楽器演奏、ジャズ、ドラムありのバンド、モニター複数系統が必要な内容です。リハーサルや転換がある場合は Standard 以上を目安にします。</p>
-            </div>
-            <div class="level-cards">
-              <article class="level-card">
-                <span class="level-name">Basic</span>
-                <h4>小編成バンド・楽器あり</h4>
-                <div class="price">¥160,000</div>
-                <dl>
-                  <div><dt>入力規模</dt><dd>〜16ch程度</dd></div>
-                  <div><dt>判断目安</dt><dd>ドラムなし、または小規模バンド</dd></div>
-                  <div><dt>想定内容</dt><dd>小編成バンド、ジャズ、楽器あり</dd></div>
-                </dl>
-              </article>
-              <article class="level-card featured">
-                <span class="level-name">Standard</span>
-                <h4>ドラムありバンド</h4>
-                <div class="price">¥190,000</div>
-                <dl>
-                  <div><dt>入力規模</dt><dd>〜24ch程度</dd></div>
-                  <div><dt>判断目安</dt><dd>モニター複数、リハあり、通常のバンドPA</dd></div>
-                  <div><dt>想定内容</dt><dd>ドラムありバンド、ジャズ、複数楽器</dd></div>
-                </dl>
-              </article>
-              <article class="level-card">
-                <span class="level-name">Plus</span>
-                <h4>入力多め・転換あり</h4>
-                <div class="price">¥230,000</div>
-                <dl>
-                  <div><dt>入力規模</dt><dd>〜32ch程度</dd></div>
-                  <div><dt>判断目安</dt><dd>モニター多め、転換・リハ多め、拘束長め</dd></div>
-                  <div><dt>想定内容</dt><dd>バンド、ジャズ、入力多め、転換あり</dd></div>
-                </dl>
-              </article>
-            </div>
-          </section>
-
-          <section class="rank-panel" id="rank-e">
-            <div class="panel-head">
-              <span class="rank-label">E</span>
-              <h3>大型ステージ向け</h3>
-              <p>屋外広範囲、複数出演者、複数バンド、転換ありの大きめイベント向けです。内容により金額は個別見積になります。</p>
-            </div>
-            <div class="level-cards">
-              <article class="level-card">
-                <span class="level-name">Basic</span>
-                <h4>屋外広範囲・単独ステージ</h4>
-                <div class="price">¥230,000</div>
-                <dl>
-                  <div><dt>入力規模</dt><dd>〜24ch程度</dd></div>
-                  <div><dt>判断目安</dt><dd>400名以上、単独ステージ、転換少なめ</dd></div>
-                  <div><dt>想定内容</dt><dd>屋外広範囲、ステージイベント</dd></div>
-                </dl>
-              </article>
-              <article class="level-card featured">
-                <span class="level-name">Standard</span>
-                <h4>複数出演・大きめ屋外</h4>
-                <div class="price">¥280,000</div>
-                <dl>
-                  <div><dt>入力規模</dt><dd>〜32ch程度</dd></div>
-                  <div><dt>判断目安</dt><dd>複数出演者、モニター多め、設営規模大</dd></div>
-                  <div><dt>想定内容</dt><dd>複数出演、大きめ屋外、音楽イベント</dd></div>
-                </dl>
-              </article>
-              <article class="level-card">
-                <span class="level-name">Plus</span>
-                <h4>複数バンド・転換あり</h4>
-                <div class="price">¥350,000〜</div>
-                <dl>
-                  <div><dt>入力規模</dt><dd>32ch以上</dd></div>
-                  <div><dt>判断目安</dt><dd>転換多め、広範囲カバー、拘束・設営負担大</dd></div>
-                  <div><dt>想定内容</dt><dd>複数バンド、大規模屋外、転換あり</dd></div>
-                </dl>
-              </article>
-            </div>
-          </section>
+      <section class="rank-panel active" id="rank-a">
+        <div class="panel-head">
+          <span class="rank-label">A</span>
+          <h3>司会・BGM向け</h3>
+          <p>屋内小規模、式典、司会、BGM、ソロ歌唱中心の内容です。</p>
         </div>
-      </div>
+        <div class="price-summary">
+          <div class="price-main">
+            <span>料金目安</span>
+            <strong>¥55,000〜</strong>
+            <small>税抜 / 内容により変動</small>
+          </div>
+          <div class="summary-box">
+            <h4>想定内容</h4>
+            <ul>
+              <li>司会、BGM、式典</li>
+              <li>ソロ歌唱少数</li>
+              <li>入力 約8chまで</li>
+            </ul>
+          </div>
+          <div class="summary-box">
+            <h4>含まれるもの</h4>
+            <ul>
+              <li>音響機材一式</li>
+              <li>有線マイク、DI、スタンド、ケーブル類</li>
+              <li>設営、調整、本番操作、撤収</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="rank-panel" id="rank-b">
+        <div class="panel-head">
+          <span class="rank-label">B</span>
+          <h3>歌唱・カラオケ向け</h3>
+          <p>歌謡、カラオケ、ソロ複数、小編成など、声と音楽を客席へ届ける内容です。</p>
+        </div>
+        <div class="price-summary">
+          <div class="price-main">
+            <span>料金目安</span>
+            <strong>¥80,000〜</strong>
+            <small>税抜 / 内容により変動</small>
+          </div>
+          <div class="summary-box">
+            <h4>想定内容</h4>
+            <ul>
+              <li>歌謡、カラオケ、ソロ複数</li>
+              <li>屋内50〜150名程度</li>
+              <li>入力 約16chまで</li>
+            </ul>
+          </div>
+          <div class="summary-box">
+            <h4>含まれるもの</h4>
+            <ul>
+              <li>音響機材一式</li>
+              <li>モニター必要数に応じて構成</li>
+              <li>設営、調整、本番操作、撤収</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="rank-panel" id="rank-c">
+        <div class="panel-head">
+          <span class="rank-label">C</span>
+          <h3>屋外イベント向け</h3>
+          <p>屋外イベント、歌謡複数、音楽再生、小編成、軽いバンドなどの内容です。入力が少ない場合でも、屋外で客席範囲がある場合はこの区分になることがあります。</p>
+        </div>
+        <div class="price-summary">
+          <div class="price-main">
+            <span>料金目安</span>
+            <strong>¥110,000〜</strong>
+            <small>税抜 / 内容により変動</small>
+          </div>
+          <div class="summary-box">
+            <h4>想定内容</h4>
+            <ul>
+              <li>屋外イベント、歌唱、BGM</li>
+              <li>屋外100〜200名程度</li>
+              <li>入力 約8〜24ch程度</li>
+            </ul>
+          </div>
+          <div class="summary-box">
+            <h4>含まれるもの</h4>
+            <ul>
+              <li>屋外向け音響機材一式</li>
+              <li>メイン、モニター、入力機器</li>
+              <li>設営、調整、本番操作、撤収</li>
+            </ul>
+          </div>
+        </div>
+        <p class="mini-note">例：屋外イベントで入力が約8chの場合でも、客席範囲や音楽再生・歌唱に必要な音量を確保する場合は、屋外イベント向けとしてご案内します。</p>
+      </section>
+
+      <section class="rank-panel" id="rank-d">
+        <div class="panel-head">
+          <span class="rank-label">D</span>
+          <h3>バンド演奏向け</h3>
+          <p>楽器演奏、ジャズ、ドラムありのバンド、モニター複数系統が必要な内容です。</p>
+        </div>
+        <div class="price-summary">
+          <div class="price-main">
+            <span>料金目安</span>
+            <strong>¥150,000〜</strong>
+            <small>税抜 / 内容により変動</small>
+          </div>
+          <div class="summary-box">
+            <h4>想定内容</h4>
+            <ul>
+              <li>バンド演奏、ジャズ、楽器あり</li>
+              <li>200〜400名程度</li>
+              <li>入力 約16〜32ch程度</li>
+            </ul>
+          </div>
+          <div class="summary-box">
+            <h4>含まれるもの</h4>
+            <ul>
+              <li>バンド対応音響機材一式</li>
+              <li>モニター複数系統</li>
+              <li>設営、調整、本番操作、撤収</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="rank-panel" id="rank-e">
+        <div class="panel-head">
+          <span class="rank-label">E</span>
+          <h3>大型ステージ向け</h3>
+          <p>屋外広範囲、複数出演者、複数バンド、転換ありの大きめイベント向けです。内容により個別見積となります。</p>
+        </div>
+        <div class="price-summary">
+          <div class="price-main">
+            <span>料金目安</span>
+            <strong>¥220,000〜</strong>
+            <small>税抜 / 内容により変動</small>
+          </div>
+          <div class="summary-box">
+            <h4>想定内容</h4>
+            <ul>
+              <li>野外ステージ、複数バンド</li>
+              <li>400名以上、屋外広範囲</li>
+              <li>入力 約24ch以上</li>
+            </ul>
+          </div>
+          <div class="summary-box">
+            <h4>含まれるもの</h4>
+            <ul>
+              <li>広範囲対応音響システム</li>
+              <li>複数モニター、転換対応</li>
+              <li>内容により個別見積</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
       <div class="wireless">
         <div class="mini-panel">
@@ -817,12 +618,12 @@
       </div>
     </section>
 
-    <section class="split-cta" id="contact">
+    <section class="contact" id="contact">
       <div class="copy">
-        <div class="kicker" style="color:var(--accent)">Contact</div>
+        <div class="kicker">Contact</div>
         <h2>お問い合わせ</h2>
         <p>開催日、会場、内容、出演者数、必要なマイク本数がわかる範囲でお知らせください。Messenger・電話・メールのいずれかでご連絡いただけます。</p>
-        <a class="btn ghost" href="mailto:kusakabeonkyo@gmail.com">問い合わせる</a>
+        <a class="btn ghost" href="mailto:kusakabeonkyo@gmail.com">メールで問い合わせる</a>
       </div>
       <div class="contact-box">
         <div class="contact-row"><span>屋号</span><strong>日下部電気音響</strong></div>
@@ -843,20 +644,16 @@
   </footer>
 
   <script>
-    const tabs = [...document.querySelectorAll('.rank-tab, .jump-tab')];
+    const tabs = [...document.querySelectorAll('.price-tab')];
     const panels = [...document.querySelectorAll('.rank-panel')];
 
     function activateRank(id){
       panels.forEach(panel => panel.classList.toggle('active', panel.id === id));
-      document.querySelectorAll('.rank-tab, .jump-tab').forEach(tab => {
-        tab.classList.toggle('active', tab.dataset.rank === id);
-      });
+      tabs.forEach(tab => tab.classList.toggle('active', tab.dataset.rank === id));
     }
 
     tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        activateRank(tab.dataset.rank);
-      });
+      tab.addEventListener('click', () => activateRank(tab.dataset.rank));
     });
   </script>
 </body>
