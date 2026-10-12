@@ -5,7 +5,7 @@
   <!-- Revision: concise-services-rental-20260917-r4 -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>日下部電気音響 | イベント音響・PA・機材レンタル</title>
-  <meta name="description" content="飛騨・東濃を拠点に、岐阜県・愛知県周辺のイベント音響、PAオペレート、音響機材レンタルに対応しています。音響業務50,000円〜（税抜）。">
+  <meta name="description" content="飛騨・東濃を拠点に、岐阜県・愛知県周辺のイベント音響、PAオペレート、音響機材レンタルに対応しています。オペレーターのみ30,000円〜、オペレーター＋機材持ち込み50,000円〜（ともに税抜）。">
   <meta name="theme-color" content="#111317">
   <style>
     :root {
@@ -85,8 +85,18 @@
       color: #c7c9cd;
       font-size: clamp(16px, 2vw, 20px);
     }
-    .starting-price {
+    .starting-prices {
+      width: min(100%, 540px);
       margin: 0 0 30px;
+      display: grid;
+      gap: 10px;
+    }
+    .starting-price {
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      column-gap: 14px;
       padding: 9px 14px;
       color: #fff;
       border-left: 3px solid #d05a60;
@@ -94,6 +104,7 @@
       font-size: 15px;
       font-weight: 750;
     }
+    .price-amount { white-space: nowrap; }
     .starting-price strong { font-size: 20px; letter-spacing: .01em; }
     .starting-price small { margin-left: 5px; color: #b9bcc1; font-weight: 500; }
     .actions { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -237,7 +248,10 @@
         <p class="eyebrow">Sound Reinforcement / PA</p>
         <h1>イベント音響<br>PA業務</h1>
         <p class="lead">飛騨・東濃を拠点に、イベント・公演の音響業務と音響機材レンタルに対応しています。</p>
-        <p class="starting-price">音響業務 <strong>50,000円〜</strong><small>（税抜）</small></p>
+        <div class="starting-prices">
+          <p class="starting-price"><span>オペレーターのみ</span><span class="price-amount"><strong>30,000円〜</strong><small>（税抜）</small></span></p>
+          <p class="starting-price"><span>オペレーター＋機材持ち込み</span><span class="price-amount"><strong>50,000円〜</strong><small>（税抜）</small></span></p>
+        </div>
         <div class="actions">
           <a class="button button-primary" href="mailto:kusakabeonkyo@gmail.com">メールでのお問い合わせ</a>
           <a class="button button-secondary" href="#service">業務内容</a>
